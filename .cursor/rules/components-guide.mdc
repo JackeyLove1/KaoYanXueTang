@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Components Structure
+
+The application uses a structured component system for UI elements:
+
+## UI Components
+
+- [src/components/ui](mdc:src/components/ui) - Contains UI component library elements
+
+## Feature Components
+
+- [src/components/ThemeSwitcher](mdc:src/components/ThemeSwitcher) - Theme switching functionality
+- [src/components/TitleBadge](mdc:src/components/TitleBadge) - Badge components for titles
+- [src/components/PanelParticles](mdc:src/components/PanelParticles) - Particle effects for panels
+- [src/components/MotionWrapper](mdc:src/components/MotionWrapper) - Animation wrappers using Framer Motion
+- [src/components/HomepageHero](mdc:src/components/HomepageHero) - Hero section for homepage
+- [src/components/CustomFooter](mdc:src/components/CustomFooter) - Footer components
+
+## Widgets and Higher-Level Components
+
+- [src/widgets](mdc:src/widgets) - Higher-level components that may combine multiple smaller components
+

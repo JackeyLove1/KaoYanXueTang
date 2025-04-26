@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# KaoYanXueTang - Project Overview
+
+This project appears to be a Next.js application for an educational platform related to graduate school entrance exams (KaoYan).
+
+## Key Files and Directories
+
+- [package.json](mdc:package.json) - Contains project dependencies and scripts
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
+- [next.config.ts](mdc:next.config.ts) - Next.js configuration
+
+## Core Structure
+
+- [src/app](mdc:src/app) - The main application directory using Next.js App Router
+- [src/components](mdc:src/components) - Reusable React components
+- [src/lib](mdc:src/lib) - Utility functions and helper libraries
+- [src/hooks](mdc:src/hooks) - Custom React hooks
+- [src/i18n](mdc:src/i18n) - Internationalization components and configurations
+

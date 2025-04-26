@@ -17,6 +17,7 @@ import { getPageMap } from 'nextra/page-map'
 import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
 import { ThemeProvider } from './_components/ThemeProvider'
 import './styles/index.css'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   // Define your metadata here
@@ -25,7 +26,7 @@ export const metadata = {
   icons: '/img/favicon.svg',
 } satisfies Metadata
 
-const repo = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
+const repo = 'https://github.com/JackeyLove1/KaoYanXueTang'
 
 const CustomBanner = async ({ lang }: I18nLangAsyncProps) => {
   const { t } = await useServerLocale(lang)
@@ -73,13 +74,13 @@ const BaiduTrack = () => {
     <>
       <Script strategy="afterInteractive">
         {`
-          var _hmt = _hmt || [];
-          (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?d5ad5e04e6af914c01767926567602be";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-          })();
+         var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8269f3757a03a04bc4a6e529373f4667";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
         `}
       </Script>
     </>
@@ -142,7 +143,7 @@ export default async function RootLayout({ children, params }: Props) {
               </LastUpdated>
             )}
             editLink={null}
-            docsRepositoryBase="https://github.com/pdsuwwz/nextjs-nextra-starter"
+            docsRepositoryBase="https://github.com/JackeyLove1/KaoYanXueTang"
             footer={(
               <Footer className="bg-background py-5!">
                 <CustomFooter />
@@ -161,8 +162,9 @@ export default async function RootLayout({ children, params }: Props) {
           </Layout>
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-VCR6017LB8" />
+      <GoogleAnalytics gaId="G-1QQ3Y1H4F4" />
       <BaiduTrack />
+      <Analytics/>
     </html>
   )
 }

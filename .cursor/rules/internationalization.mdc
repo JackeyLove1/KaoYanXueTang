@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Internationalization (i18n)
+
+This application supports multiple languages through a comprehensive i18n system:
+
+## Core i18n Structure
+
+- [src/i18n](mdc:src/i18n) - Contains i18n configuration, translations, and helpers
+- [src/app/[lang]](mdc:src/app/[lang]) - Dynamic routes based on language parameter
+- [src/app/_dictionaries](mdc:src/app/_dictionaries) - Dictionary files for different languages
+
+## Implementation
+
+- The application uses Next.js route parameters to handle language selection
+- The `[lang]` directory creates dynamic routes that include language code
+- Dictionary files provide translations for different parts of the application
+

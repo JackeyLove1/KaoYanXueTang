@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Content Management
+
+This application appears to use a structured approach to content management:
+
+## Content Structure
+
+- [src/content](mdc:src/content) - Contains content files and data structures
+- [src/mdx-components.ts](mdc:src/mdx-components.ts) - MDX component customization
+
+## Implementation
+
+The application likely uses MDX for rich content with React components. The `mdx-components.ts` file provides custom components used within markdown content, enhancing the capabilities of standard markdown.
+
+Content may be organized by type, language, or other categorizations within the content directory structure.
+
