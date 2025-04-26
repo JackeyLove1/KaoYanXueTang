@@ -33,10 +33,11 @@ $$
 - 奇函数 $f(x)$ 若在 $x = 0$ 处有定义，则 $f(0) = 0$.
 - $\sin x$, $\tan x$, $\arcsin x$, $\arctan x$, $\ln\frac{1 - x}{1 + x}$, $\ln(x + \sqrt{1 + x^2})$, $\frac{e^x - 1}{e^x + 1}$, $f(x) - f(-x)$ 都是奇函数；$x^2$, $|x|$, $\cos x$, $f(x) + f(-x)$ 都是偶函数.
 
-#### 例 8
+**例 8**
 
 判断函数 $f(x) = \ln(\sqrt{1 + x^2} - x)$ 的奇偶性.
 
+<AnalysisAccordion>
 **【解】** 显然 $f(x) = \ln(\sqrt{1 + x^2} - x)$ 的定义域关于原点对称.
 
 因为
@@ -50,17 +51,20 @@ $$
 $$
 
 所以 $f(x) = \ln(\sqrt{1 + x^2} - x)$ 是奇函数.
+</AnalysisAccordion>
 
-#### 例 9
+**例 9**
 
 若 $g(x)$ 在 $(-\infty, +\infty)$ 内恒有 $g(x + y) = g(x) + g(y)$，对任意 $x, y$ 都成立.  
 试判定 $f(x) = g(x)\sin x$ 的奇偶性.
 
+<AnalysisAccordion>
 **【解】** 由 $g(x + y) = g(x) + g(y)$，取 $y = 0$ 得 $g(x) = g(x) + g(0)$，则 $g(0) = 0$.  
 令 $y = -x$ 得 $g(0) = g(x) + g(-x)$，得 $g(-x) = -g(x)$，则 $g(x)$ 为奇函数.  
 又 $\sin x$ 为奇函数，则 $f(x) = g(x)\sin x$ 为偶函数.
+</AnalysisAccordion>
 
-3. 周期性
+### 3. 周期性
 
 **定义** 若存在实数 $ T > 0 $，对于任意 $ x $，恒有 $ f(x+T) = f(x) $，则称 $ y = f(x) $ 为以 $ T $ 为周期的周期函数。使得上述关系式成立的最小正数 $ T $ 称为 $ f(x) $ 的最小正周期，简称为函数 $ f(x) $ 的周期。
 
@@ -77,10 +81,12 @@ $$
 (5) 周期性的判定：定义法、周期函数的运算性质。
 
 **例 10** 判定函数 $ f(x) = \sin 3x - \cos 2x + \tan(4x+1) $ 的周期。
-
+<AnalysisAccordion>
 **【解】** $ \sin 3x $ 的周期为 $ \frac{2}{3}\pi $，$ \cos 2x $ 的周期为 $ \pi $，$ \tan(4x+1) $ 的周期为 $ \frac{\pi}{4} $，所以，$ f(x) = \sin 3x - \cos 2x + \tan(4x+1) $ 的周期为 $ \frac{2}{3}\pi $，$ \pi $，$ \frac{\pi}{4} $ 的最小公倍数 $ 2\pi $。
+</AnalysisAccordion>
 
-4. 有界性
+
+### 4. 有界性
 
 **定义** 设 $ y = f(x) $ 在集合 $ X $ 上有定义。若存在 $ M > 0 $，使得对任意的 $ x \in X $，恒有
 $$
@@ -104,25 +110,28 @@ $$
 
 **例 11** 判断函数 $ f(x)=\frac{x+3}{x^2+1} $ 是否有界。
 
+<AnalysisAccordion>
 **【解】** $ |f(x)|= \left| \frac{x+3}{x^2+1} \right| \leq \frac{|x|}{x^2+1} + \frac{3}{x^2+1} \leq \frac{1}{2} + 3 = \frac{7}{2} $，所以 $ f(x)=\frac{x+3}{x^2+1} $ 有界。
+</AnalysisAccordion>
 
 **例 12** 证明函数 $ f(x)=x\sin x $ 是无界函数。
 
+<AnalysisAccordion>
 **【证】** 由于 $ f\left( 2n\pi + \frac{\pi}{2} \right) =2n\pi + \frac{\pi}{2} $，所以，对于任意的 $ M > 0 $，只要正整数 $ n $ 充分大，总有
 $$
 \left| f\left( 2n\pi + \frac{\pi}{2} \right) \right| = 2n\pi + \frac{\pi}{2} > M,
 $$
 
-$\text{考研数学复习全书·基础篇}$
-
 故函数 $f(x) = x \sin x$ 是无界函数.
+</AnalysisAccordion>
 
-### 例13
+**例 13**
 (1987, 数二) 函数 $f(x) = |x \sin x| \mathrm{e}^{\cos x}(-\infty < x < +\infty)$ 是
 
 (A) 有界函数. （B）单调函数. （C）周期函数. （D）偶函数.
 
-### 【解】应选(D).
+<AnalysisAccordion>
+**【解】** 应选(D).
 
 由 $\cos x$ 是偶函数, 知 $\mathrm{e}^{\cos x}$ 是偶函数, 又 $|x \sin x|$ 是偶函数, 则 $f(x) = |x \sin x| \mathrm{e}^{\cos x}$ 是偶函数, 故选项(D) 正确.
 
@@ -131,3 +140,4 @@ $\text{考研数学复习全书·基础篇}$
 显然 $f(x)$ 不单调, 也没有周期, 因此选项(B)(C) 不正确.
 
 故应选(D).
+</AnalysisAccordion>
