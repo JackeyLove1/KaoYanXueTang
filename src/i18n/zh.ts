@@ -9,7 +9,7 @@ export default {
   featureSupport: `🔥 现在支持 {{feature}}！`,
   lastUpdated: '最后更新于:',
 
-  getStarted: '开始使用',
+  getStarted: '现在学习',
 
   themeSwitcher: {
     light: '浅色模式',

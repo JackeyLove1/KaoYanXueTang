@@ -1,0 +1,357 @@
+### 1. 函数概念
+
+**定义** 设 $x$ 和 $y$ 是两个变量，$D$ 是一个给定的非空数集。如果对于每个 $x \in D$，按照一定的对应法则 $f$ 总有一个确定的数值 $y$ 和它对应，则称 $y$ 是 $x$ 的函数，记为
+$$
+y = f(x), x \in D,
+$$
+其中 $x$ 称为自变量，$y$ 称为因变量，$D$ 称为函数的定义域，记作 $D_f$，即 $D_f = D$。
+
+函数值 $f(x)$ 的全体所构成的集合称为函数 $f$ 的值域，记作 $R_f$ 或 $f(D)$，即
+$$
+R_f = f(D) = \{y \mid y = f(x), x \in D\}.
+$$
+
+【注】
+(1) 函数有两个基本要素：定义域、对应法则（或称依赖关系）。当两个函数的定义域与对应法则完全相同时，它们就是同一函数。
+
+(2) 要求函数的定义域，应牢记以下结论：
+$$
+\text{分式的分母不为 0, } \sqrt[n]{x} (x \geq 0), \log_a x (x > 0).
+$$
+$$
+\tan x, \sec x \left(x \neq k\pi + \frac{\pi}{2}\right); \cot x, \csc x (x \neq k\pi).
+$$
+$$
+\arcsin x, \arccos x (-1 \leq x \leq 1).
+$$
+
+**例 1** 
+设函数 $f(x)=\frac{1}{\sqrt{3-x}}+\ln(x-2)$, 求 $f(x)$ 的定义域.
+
+<AnalysisAccordion>
+$f(x)$ 的定义域应满足 $\begin{cases} \sqrt{3-x}\neq 0, \\ 3-x \geq 0, \quad \text{解得 } x<3, \\ x-2 > 0, \quad \text{解得 } x>2, \end{cases}$ 
+
+综合上述条件，得 $f(x)$ 的定义域为 $(2, 3)$.
+</AnalysisAccordion>
+
+---
+
+### 2. 分段函数
+
+有些函数，对其定义域内自变量不同的取值，其对应法则不能用一个统一的数学表达式表示，而要用两个或两个以上的数学式子表示，这类函数称为分段函数.
+
+**【注】** 分段函数虽然用多个解析式表示，但它是一个函数，而不是多个函数.
+
+**例 2**
+(1) 函数 $f(x)= \begin{cases} \frac{\sin x}{x}, & x<0, \\ x^2+1, & x \geq 0 \end{cases}$ 为分段函数，其定义域为 $(-\infty, +\infty)$.
+
+(2) 函数 $f(x)=2-\left|1-x^2\right|$ 也是分段函数，可化为
+$$
+f(x)=2-\left|1-x^2\right|=\begin{cases} 3-x^2, & x<-1, \\ 1+x^2, & -1 \leq x \leq 1, \\ 3-x^2, & x>1. \end{cases}
+$$
+
+(3) 函数 $f(x)=\max\{x, x^2\}$ 也是分段函数，可化为
+$$
+f(x)=\max\{x, x^2\}=\begin{cases} x^2, & x \leq 0, \\ x, & 0<x<1, \\ x^2, & x \geq 1. \end{cases}
+$$
+
+(4) 符号函数也是分段函数
+$$
+y=\operatorname{sgn}x=\begin{cases} -1, & x<0, \\ 0, & x=0, \\ 1, & x>0. \end{cases}
+$$
+
+(5) 取整函数 $y=[x]$ 也是分段函数.
+
+$[x]$ 表示不超过 $x$ 的最大整数.
+
+**【评注】** 分段函数常见于上述五种形式的函数.
+
+---
+
+
+### 3. 复合函数
+
+
+**定义** 设函数 $y=f(u)$ 的定义域为 $D_f$，函数 $u=g(x)$ 的定义域为 $D_g$，值域为 $R_g$，若 $D_f \cap R_g \neq \varnothing$，则称函数 $y=f[g(x)]$ 为函数 $y=f(u)$ 与 $u=g(x)$ 的复合函数。它的定义域为 $\{x \mid x \in D_g, g(x) \in D_f\}$.
+
+**【注】** 不是任何两个函数都可以复合，如 $y=f(u)=\ln u, u=g(x)=\sin x-1$，就不能复合，这是由于 $D_f=(0, +\infty), R_g=[-2, 0], D_f \cap R_g = \varnothing$.
+
+**例 3**
+已知 $f(x)=\begin{cases} x+1, & -1 \leq x \leq 1, \\ x-1, & 1 < x \leq 2, \end{cases}$ 求 $f(\sqrt{x})$ 的定义域，并求 $f(\sqrt{x})$ 的表达式.
+
+<AnalysisAccordion>
+$f(x)$ 的定义域为 $[-1, 2]$，则 $f(\sqrt{x})$ 的定义域满足 $\begin{cases} -1 \leq \sqrt{x} \leq 2, \\ x \geq 0, \end{cases}$
+
+
+解得 $0 \leqslant x \leqslant 4$，即 $f(\sqrt{x})$ 的定义域为 $[0, 4]$.
+
+$$
+f(\sqrt{x}) =
+\begin{cases}
+\sqrt{x} + 1, & -1 \leqslant \sqrt{x} \leqslant 1, \\
+\sqrt{x} - 1, & 1 < \sqrt{x} \leqslant 2
+\end{cases}
+=
+\begin{cases}
+\sqrt{x} + 1, & 0 \leqslant x \leqslant 1, \\
+\sqrt{x} - 1, & 1 < x \leqslant 4
+\end{cases}.
+$$
+</AnalysisAccordion>
+---
+
+**例 4**
+
+已知 $f(x - 1) = \ln \frac{x}{x - 2}$, $f[\varphi(x)] = \ln x$，求 $f(x)$ 及 $\varphi(x)$。
+
+<AnalysisAccordion>
+【解】令 $x - 1 = t$，则 $x = t + 1$，代入 $f(x - 1) = \ln \frac{x}{x - 2}$ 得 $f(t) = \ln \frac{t + 1}{t - 1}$。
+
+于是 $f[\varphi(x)] = \ln \frac{\varphi(x) + 1}{\varphi(x) - 1} = \ln x$，即 $\frac{\varphi(x) + 1}{\varphi(x) - 1} = x$，解得 $\varphi(x) = \frac{x + 1}{x - 1}$。
+
+所以，$f(x) = \ln \frac{x + 1}{x - 1}$，$\varphi(x) = \frac{x + 1}{x - 1}$。
+</AnalysisAccordion>
+---
+
+**例 5**
+
+（1990，数一、二）设函数 $f(x) =
+\begin{cases}
+1, & |x| \leqslant 1, \\
+0, & |x| > 1,
+\end{cases}
+$，则函数 $f[f(x)] = \quad$。
+
+<AnalysisAccordion>
+【解】应填 1。
+
+由 $f(x)$ 的表达式知，$|f(x)| \leqslant 1$，而 $f[f(x)] =
+\begin{cases}
+1, & |f(x)| \leqslant 1, \\
+0, & |f(x)| > 1,
+\end{cases}
+$，所以有 $f[f(x)] = 1$。故应填 1。
+</AnalysisAccordion>
+---
+
+
+**例 6**
+
+（1992，数二）设 $f(x) =
+\begin{cases}
+x^2, & x \leqslant 0, \\
+x^2 + x, & x > 0,
+\end{cases}
+$，则
+
+(A) $f(-x) =
+\begin{cases}
+-x^2, & x \leqslant 0, \\
+-(x^2 + x), & x > 0.
+\end{cases}
+$
+
+(B) $f(-x) =
+\begin{cases}
+-(x^2 + x), & x < 0, \\
+-x^2, & x \geqslant 0.
+\end{cases}
+$
+
+(C) $f(-x) =
+\begin{cases}
+x^2, & x \leqslant 0, \\
+x^2 - x, & x > 0.
+\end{cases}
+$
+
+(D) $f(-x) =
+\begin{cases}
+x^2 - x, & x < 0, \\
+x^2, & x \geqslant 0.
+\end{cases}
+$
+
+<AnalysisAccordion>
+【解】由 $f(x) =
+\begin{cases}
+x^2, & x \leqslant 0, \\
+x^2 + x, & x > 0
+\end{cases}
+$ 知
+
+$$
+f(-x) =
+\begin{cases}
+(-x)^2, & -x \leqslant 0, \\
+(-x)^2 + (-x), & -x > 0
+\end{cases}
+=
+\begin{cases}
+x^2, & x \geqslant 0, \\
+x^2 - x, & x < 0.
+\end{cases}
+$$
+
+故应选 (D)。
+</AnalysisAccordion>
+---
+
+### 4. 反函数
+
+**定义** 设函数 $y = f(x)$ 的定义域为 $D$，值域为 $R_y$。若对任意 $y \in R_y$，有唯一确定的 $x \in D$，使得 $y = f(x)$，则记为 $x = f^{-1}(y)$，称其为函数 $y = f(x)$ 的反函数。
+
+【注】
+
+(1) 不是每个函数都有反函数。如 $y = x^3$ 有反函数，而 $y = x^2$ 没有反函数。
+
+(2) 单调函数一定有反函数，但反之则不然，如 $f(x) =
+\begin{cases}
+x, & 0 \leqslant x < 1, \\
+3 - x, & 1 \leqslant x \leqslant 2
+\end{cases}
+$ 有反函数，但不单调。
+
+(3) 通常将 $y = f(x)$ 的反函数 $x = f^{-1}(y)$ 写成 $y = f^{-1}(x)$。在同一直角坐标系中，$y = f(x)$ 和 $x = f^{-1}(y)$ 的图形重合，$y = f(x)$ 和 $y = f^{-1}(x)$ 的图形关于直线 $y = x$ 对称。
+
+(4) $y = f(x)$ 和 $y = f^{-1}(x)$ 的定义域和值域互换。
+
+(5) $f^{-1}[f(x)]=x$, $f[f^{-1}(x)]=x$.
+
+
+
+**例 7** 求函数 $y=\frac{e^x}{e^x+1}$ 的反函数.
+
+<AnalysisAccordion>
+解 由 $y=\frac{e^x}{e^x+1}$ 得 $(e^x+1)y=e^x$, 即 $e^x=\frac{y}{1-y}$, 得 $x=\ln \frac{y}{1-y}$.
+
+则 $y=\frac{e^x}{e^x+1}$ 的反函数为 $y=\ln \frac{x}{1-x}$.
+</AnalysisAccordion>
+
+--- 
+
+### 5. 初等函数
+
+定义 将幂函数、指数函数、对数函数、三角函数及反三角函数统称为基本初等函数.
+
+1. <span style={{ color: 'red' }}>幂函数 $\ y=x^\mu$ ($\mu$ 为实数)</span>
+
+(1) 幂函数 $y=x^\mu$ 的定义域和值域取决于 $\mu$ 的取值，当 $x>0$ 时，$y=x^\mu$ 都有定义.
+
+(2) 常见幂函数：$y=x$, $y=x^2$, $y=x^3$, $y=\sqrt{x}$, $y=\sqrt[3]{x}$, $y=\frac{1}{x}$.
+
+2. <span style={{ color: 'red' }}>指数函数 $\ y=a^x$ ($a>0$, $a\neq 1$)</span>
+
+(1) 定义域：$(-\infty,+\infty)$，值域：$(0,+\infty)$.
+
+(2) 单调性：当 $a>1$ 时，$y=a^x$ 单调增加；当 $0<a<1$ 时，$y=a^x$ 单调减少.
+
+(3) 常见指数函数：$y=e^x$，单调增加，$\lim_{x\to-\infty}e^x=0$, $\lim_{x\to+\infty}e^x=+\infty$.
+
+3. <span style={{ color: 'red' }}>对数函数 $\ y=\log_a x$ ($a>0$, $a\neq 1$)</span>
+
+(1) 定义域：$(0,+\infty)$，值域：$(-\infty,+\infty)$.
+
+(2) 单调性：当 $a>1$ 时，$y=\log_a x$ 单调增加；当 $0<a<1$ 时，$y=\log_a x$ 单调减少.
+
+(3) 常见对数函数：$y=\ln x$，单调增加，$\lim_{x\to 0^+}\ln x=-\infty$, $\lim_{x\to+\infty}\ln x=+\infty$.
+
+4. <span style={{ color: 'red' }}>三角函数 $\ y=\sin x$, $y=\cos x$, $y=\tan x$, $y=\cot x$, $y=\sec x$, $y=\csc x$</span>
+
+(1) 正弦函数 $\sin x$ 与余弦函数 $\cos x$
+
+① 定义域：$(-\infty,+\infty)$，值域：$[-1,1]$.
+
+② 奇偶性：$\sin x$ 是奇函数，$\cos x$ 是偶函数.
+
+③ 周期性：$\sin x$ 和 $\cos x$ 都以 $2\pi$ 为周期.
+
+④ 有界性：$|\sin x|\leqslant 1$, $|\cos x|\leqslant 1$.
+
+⑤ 关系式：$\sin^2 x+\cos^2 x=1$.
+
+(2) 正切函数 $\tan x$ 与余切函数 $\cot x$
+
+① 定义域：
+
+$\tan x$ 的定义域为 $D=\{x|x\neq k\pi+\frac{\pi}{2},k\in\mathbf{Z}\}$;
+
+$\cot x$ 的定义域为 $D=\{x|x\neq k\pi,k\in\mathbf{Z}\}$.
+
+② 奇偶性：$\tan x$ 和 $\cot x$ 都是奇函数.
+
+③ 周期性：$\tan x$ 和 $\cot x$ 都以 $\pi$ 为周期.
+
+④ 关系式：$\tan x=\frac{\sin x}{\cos x}$, $\cot x=\frac{\cos x}{\sin x}$, $\cot x=\frac{1}{\tan x}$.
+
+(3) 正割函数 $\sec x$ 与余割函数 $\csc x$
+
+① 定义域：
+
+sec $x$ 的定义域为 $D=\left\{x \mid x \neq k \pi+\frac{\pi}{2}, k \in \mathbf{Z}\right\}$;
+
+csc $x$ 的定义域为 $D=\{x \mid x \neq k \pi, k \in \mathbf{Z}\}$.
+
+(2) 奇偶性: sec $x$ 是偶函数, csc $x$ 是奇函数.
+
+(3) 周期性: sec $x$ 和 csc $x$ 都以 $2 \pi$ 为周期.
+
+(4) 关系式: $\sec x=\frac{1}{\cos x}, \csc x=\frac{1}{\sin x}$;
+
+$\sec ^{2} x=1+\tan ^{2} x, \csc ^{2} x=1+\cot ^{2} x$.
+
+5. <span style={{ color: 'red' }}>反三角函数 $y=\arcsin x, y=\arccos x, y=\arctan x, y=\mathrm{arccot} x$</span>
+
+(1) 反正弦函数 arcsin $x$ 与反余弦函数 arccos $x$
+
+(1) 定义域: $[-1,1]$. 值域: $\arcsin x$ 的值域为 $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$, $\arccos x$ 的值域为 $[0, \pi]$.
+
+(2) 单调性: $\arcsin x$ 单调增加, $\arccos x$ 单调减少.
+
+(3) 奇偶性: $\arcsin x$ 是奇函数.
+
+(4) 有界性: $\left|\arcsin x\right| \leqslant \frac{\pi}{2}, 0 \leqslant \arccos x \leqslant \pi$.
+
+(5) 关系式: $\arcsin x+\arccos x=\frac{\pi}{2}, x \in[-1,1]$.
+
+(2) 反正切函数 $\arctan x$ 与反余切函数 $\arccot x$
+
+(1) 定义域: $(-\infty,+\infty)$, 值域: $\arctan x$ 的值域为 $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \arccot x$ 的值域为 $(0, \pi)$.
+
+(2) 单调性: $\arctan x$ 单调增加, $\arccot x$ 单调减少.
+
+(3) 奇偶性: $\arctan x$ 是奇函数.
+
+(4) 有界性: $\left|\arctan x\right|<\frac{\pi}{2}, 0<\arccot x<\pi$.
+
+(5) 关系式: $\arctan x+\arccot x=\frac{\pi}{2}$.
+
+**定义** 由常数和基本初等函数经过有限次四则运算和有限次的函数复合所构成并可用一个式子表示的函数, 称为初等函数.
+
+--- 
+
+### 6. 隐函数
+
+设有关系式 $F(x, y)=0$, 若 $\forall x \in D$, 存在唯一的 $y$ 满足 $F(x, y)=0$ 与 $x$ 相对应,由此确定的 $y$ 与 $x$ 的函数关系 $y=y(x)$ 称为由方程 $F(x, y)=0$ 所确定的隐函数.
+
+---
+
+### 7. 参数方程确定的函数
+
+由 $\left\{\begin{array}{l}x=\varphi(t), \\ y=\psi(t)\end{array}, \quad \alpha \leqslant t \leqslant \beta\right.$ 确定的函数 $y=f(x), a \leqslant x \leqslant b$.
+
+---
+
+### 8. 幂指函数
+
+$y=u(x)^{v(x)}$, 其中 $u(x)>0$.
+
+幂指函数的讨论常利用恒等式
+
+$u(x)^{v(x)}=\mathrm{e}^{v(x) \ln u(x)}$.
+
+---
+
+
+
+

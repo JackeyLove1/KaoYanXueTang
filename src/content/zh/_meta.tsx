@@ -17,15 +17,27 @@ export default {
       navbar: true,
       toc: false,
     },
+    display: 'hidden',
   },
   docs: {
     title: '📦 示例代码',
+    display: 'hidden',
     type: 'page',
   },
   upgrade: {
     title: (
       <span className="flex items-center leading-[1]">
         新变化
+        <TitleBadge />
+      </span>
+    ),
+    type: 'page',
+    display: 'hidden',
+  },
+  mathBasic: {
+    title: (
+      <span className="flex items-center leading-[1]">
+        数学基础(通用)
         <TitleBadge />
       </span>
     ),

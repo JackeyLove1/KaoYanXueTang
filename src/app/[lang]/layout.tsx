@@ -18,6 +18,7 @@ import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
 import { ThemeProvider } from './_components/ThemeProvider'
 import './styles/index.css'
 import { Analytics } from "@vercel/analytics/react"
+import 'katex/dist/katex.min.css'
 
 export const metadata = {
   // Define your metadata here
