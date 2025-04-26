@@ -1,11 +1,11 @@
 export default {
-  systemTitle: '🚀 Nextra 启动模板',
+  systemTitle: '🚀 考研学堂',
   banner: {
-    title: '👋 嘿，欢迎来到 Next.js 起步模板!',
+    title: '👋 欢迎来到考研学堂!',
     more: '了解详情',
   },
 
-  badgeTitle: '轻量级、开箱即用 🎉',
+  badgeTitle: '在线考研学习手册 🎉',
   featureSupport: `🔥 现在支持 {{feature}}！`,
   lastUpdated: '最后更新于:',
 
@@ -20,67 +20,67 @@ export default {
 
   featureList: [
     {
-      title: '先进的技术栈',
-      description: '高效的 React (v19) 框架，使用 Next.js、Nextra(v4) 和 Shadcn UI 打造现代化应用',
+      title: '考研知识点全覆盖',
+      description: '覆盖考研所有公共课程，包括数学一二三，英语，政治，专业课等',
     },
     {
-      title: '国际化支持 (i18n)',
-      description: '内置多语言支持，轻松实现应用的国际化，扩大用户群体',
+      title: '考研真题讲解',
+      description: '提供考研真题讲解，包括历年真题和模拟题',
     },
     {
-      title: 'TypeScript 类型安全',
-      description: '全面集成 TypeScript，提供静态类型检查，减少运行时错误，提高代码可靠性和可维护性',
+      title: '小程序支持',
+      description: '强烈推荐在小程序中进行刷题答疑和错题整理',
     },
     {
-      title: 'Iconify 图标集',
-      description: '纯 CSS 图标, 集成 Iconify 图标集，提供丰富的图标选择，增强 UI 视觉表现',
+      title: '考研经验分享',
+      description: '提供考研经验分享，包括考研经验分享，考研经验分享，考研经验分享',
     },
     {
-      title: 'Tailwind CSS (v4)',
-      description: '使用原子化 CSS 框架 Tailwind CSS，快速构建高效设计、响应式界面 UI',
+      title: '智能刷题答疑',
+      description: '集成DeepSeek AI引擎，提供7x24小时真题解析与知识点答疑服务',
     },
     {
-      title: '代码规范',
-      description: '遵循最佳实践的代码规范，结合 ESLint 进行代码质量检查与一致性维护',
+      title: '个性化学习计划',
+      description: '基于AI算法生成专属备考方案，智能调整每日学习任务',
     },
     {
-      title: '暗黑模式',
-      description: '支持暗黑模式，提供更好的夜间使用体验',
+      title: '全科备考资料库',
+      description: '涵盖数学、英语、政治及专业课的权威电子教材与讲义下载',
     },
     {
-      title: '丰富组件 & 支持自由扩展',
-      description: '提供丰富的预置组件，并支持灵活的自定义扩展',
+      title: '学习进度跟踪',
+      description: '可视化学习数据看板，实时监测各科目掌握程度',
     },
     {
-      title: '轻量化设计',
-      description: '采用轻量化设计，精简项目设置，专注于内容编写',
+      title: '院校报考指南',
+      description: '提供最新招生简章、分数线查询及导师信息数据库',
     },
   ],
-  featuresDesc: '轻松构建现代应用，快速启动您的开发流程',
+  featuresDesc: '',
   faqs: [
     {
-      question: '这个启动模板支持哪些框架和技术栈？',
-      answer: '本启动模板支持 Next.js 和 Nextra，并集成了 Tailwind CSS、Framer Motion、Shadcn UI 组件等现代开发技术栈。',
+      question: '平台覆盖哪些考研科目？',
+      answer: '全面涵盖考研公共课（数学、英语、政治）及主流专业课，支持400+院校AI定制化备考方案',
     },
     {
-      question: '我如何开始使用这个模板进行开发？',
-      answer: '只需克隆我们的 GitHub 仓库并按照文档中的步骤运行安装命令，即可开始使用本模板进行开发。',
+      question: '如何制定学习计划？',
+      answer: '通过智能测评生成个性化备考方案，AI根据学习进度动态调整每日任务，支持手动微调',
     },
     {
-      question: '这个模板适合哪些类型的项目？',
-      answer: '该模板适合用于创建快速、高效的现代 Web 应用程序，包括企业站点、个人博客、电子商务平台等。',
+      question: '真题资料是否及时更新？',
+      answer: '保证每年考后30天内更新最新真题，配套权威解析和AI评分系统',
     },
     {
-      question: '如何添加或修改项目中的组件？',
-      answer: '可以使用提供的组件库，按照文档中的说明进行自定义和扩展，以适应您的具体需求。',
+      question: '学习进度如何多端同步？',
+      answer: '建议使用微信小程序进行刷题学习，电脑端、IPad端、手机端数据实时同步',
     },
     {
-      question: '模板是否提供多语言支持？',
-      answer: '是的，模板内置国际化 (i18n) 功能，可以轻松添加和管理多语言内容，扩大应用的国际用户群。',
+      question: 'AI答疑的准确率如何？',
+      answer: '采用最先进的DeepSeek和豆包大模型，考研真题解析准确率达90%+，支持疑难题人工复核',
     },
     {
-      question: '如何获得技术支持或帮助？',
-      answer: '如果在使用过程中遇到问题，请通过 GitHub @pdsuwwz 与我们联系。',
+      question: '是否有免费题库？',
+      answer: '刷题答疑全免费，错题本全免费',
     },
   ],
 

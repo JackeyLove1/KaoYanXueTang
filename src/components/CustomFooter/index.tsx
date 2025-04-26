@@ -45,8 +45,8 @@ export function CustomFooter() {
       )}
       >
         <UnderlineLink
-          link="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          label="CC BY-NC-SA 4.0"
+          link="https://beian.miit.gov.cn/"
+          label="赣ICP备2024030965号-1"
           underlineByDefault
         />
 
@@ -57,12 +57,12 @@ export function CustomFooter() {
             { new Date().getFullYear() }
           </span>
           <UnderlineLink
-            link="https://github.com/pdsuwwz"
+            link="https://github.com/JackeyLove1/KaoYanXueTang"
             label={(
               <>
                 <span className="animate-[heartbeat_1.5s_infinite] mr-[3px]">❤️</span>
                 {' '}
-                Wisdom
+                格物智源Tech
               </>
             )}
           />

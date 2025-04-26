@@ -20,7 +20,7 @@ export function SetupHero(props: Props) {
         <div className={styles.badgeContainer}>
           <a
             className={styles.badge}
-            href="https://github.com/pdsuwwz/nextjs-nextra-starter"
+            href="https://github.com/JackeyLove1/KaoYanXueTang"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,14 +35,9 @@ export function SetupHero(props: Props) {
             <span className="icon-[emojione-v1--lightning-mood]"></span>
           </MotionWrapperFlash>
           {' '}
-          Nextra
+          考研学堂
           {' '}
           <br className="sm:hidden"></br>
-          {' '}
-          Starter
-          <br className="sm:hidden"></br>
-          {' '}
-          Template
         </h1>
 
         <Link
@@ -57,7 +52,7 @@ export function SetupHero(props: Props) {
           ])}
           dangerouslySetInnerHTML={{
             __html: t('featureSupport', {
-              feature: `<span>Tailwind CSS v4, Nextra v4</span>`,
+              feature: `数学一二三,英语,政治,专业课`,
             }),
           }}
         />
@@ -68,49 +63,36 @@ export function SetupHero(props: Props) {
           'text-neutral-500 dark:text-neutral-300',
         ])}
         >
-          Template made
+          在线学习
           {' '}
           <FlipWords
             words={[
-              'Fast',
-              'Simple',
-              'Modern',
-              'Flexible',
-              'Easy',
-              'Functional',
-              'Efficient',
-              'Scalable',
-              'Reusable',
+              '数学一',
+              '英语一',
+              '数学二',
+              '英语二',
+              '数学三',
+              '政治',
+              '计算机401',
+              '金融431',
             ]}
           />
           <br />
-          With
+          微信小程序端纵享
           {' '}
           <LinkPreview
-            url="https://nextjs.org"
+            url="https://chat.deepseek.com/"
           >
-            Next.js
+            DeepSeek
           </LinkPreview>
           ,
           {' '}
           <LinkPreview
-            url="https://tailwindcss.com"
+            url="https://www.doubao.com/"
           >
-            Tailwind CSS
+            豆包
           </LinkPreview>
-          , and
-          {' '}
-          <LinkPreview
-            url="https://ui.shadcn.com"
-          >
-            Shadcn UI
-          </LinkPreview>
-          {', '}
-          <LinkPreview
-            url="https://ui.aceternity.com"
-          >
-            Aceternity UI
-          </LinkPreview>
+          在线答疑
         </div>
         <div className="flex justify-center pt-10">
           <div className="max-w-[500px] flex flex-wrap gap-[20px] max-sm:justify-center">
@@ -133,7 +115,7 @@ export function SetupHero(props: Props) {
               className="font-bold group max-sm:w-[100%]"
             >
               <Link
-                href="https://github.com/pdsuwwz/nextjs-nextra-starter"
+                href="https://github.com/JackeyLove1/KaoYanXueTang"
                 target="_blank"
               >
                 Github
