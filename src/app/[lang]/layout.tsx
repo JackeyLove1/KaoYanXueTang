@@ -139,7 +139,6 @@ export default async function RootLayout({ children, params }: Props) {
             }
             lastUpdated={(
               <LastUpdated>
-                { t('lastUpdated') }
               </LastUpdated>
             )}
             editLink={null}
