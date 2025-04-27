@@ -1,0 +1,202 @@
+### 二、连续函数的运算与初等函数的连续性
+
+#### 1. 连续函数的运算
+
+**定理（四则运算）** 若函数 $f(x)$ 和 $g(x)$ 在 $x_0$ 处都连续，则 $f(x) \pm g(x), f(x)g(x), \frac{f(x)}{g(x)} (g(x_0) \neq 0)$ 在点 $x_0$ 处也连续.
+
+**定理（复合函数的连续性）** 如果函数 $u = \varphi(x)$ 在点 $x = x_0$ 处连续，$\varphi(x_0) = u_0$，而函数 $y = f(u)$ 在点 $u = u_0$ 处连续，则复合函数 $y = f[\varphi(x)]$ 在 $x = x_0$ 处连续. 即 $\lim \limits_{x \to x_0} f[\varphi(x)] = f[\varphi(x_0)]$.
+
+**【注】** 只要 $\lim \limits_{x \to x_0} \varphi(x) = u_0$，而 $f(u)$ 在 $u_0$ 点连续，则
+
+$\lim \limits_{x \to x_0} f[\varphi(x)] = f\left[\lim \limits_{x \to x_0} \varphi(x)\right] = f(u_0),$
+
+即当 $f(u)$ 连续时，函数符号 $f$ 与极限号可以变换次序.
+
+**定理（反函数的连续性）** 设函数 $y = f(x)$ 在某区间上连续，且单调增加（减少），则它的反函数 $y = f^{-1}(x)$ 在对应区间上连续，且单调增加（减少）.
+
+---
+
+#### 2. 初等函数的连续性
+
+**定理** 基本初等函数在其定义域内都是连续的.
+
+**定理** 初等函数在其定义区间内都是连续的.
+  
+> 所谓定义区间，是指包含在定义域内的区间。
+> 
+> 分段函数多数不是初等函数，在其定义域内不一定全是连续的，其定义域内除分界点之外的点，往往都连续，但在分界点上不一定连续，要单独考虑。
+
+---
+
+**例 7**  下列命题错误的是
+
+- (A) 若 $ f(x) $ 在 $ x_0 $ 处连续，$ g(x) $ 在 $ x_0 $ 处不连续，则 $ f(x) + g(x) $ 在 $ x_0 $ 处不连续.
+
+- (B) 若 $ f(x) $ 在 $ x_0 $ 处连续，则 $ \frac{1}{f(x)} $ 在 $ x_0 $ 处也连续.
+
+- (C) 若 $ f(x) $ 在 $ x_0 $ 处连续，则 $ |f(x)| $ 在 $ x_0 $ 处也连续.
+
+- (D) 若 $ f(x) $ 在 $ x_0 $ 处连续，$ f(x) \neq 0 $，且 $ f(x) g(x) $ 在 $ x_0 $ 处连续，则 $ g(x) $ 在 $ x_0 $ 处连续.
+
+**解**  
+选项 (A) 正确。反证法：若 $ f(x) + g(x) $ 在 $ x_0 $ 处连续，则 $ g(x) = [f(x) + g(x)] - f(x) $，知 $ g(x) $ 在 $ x_0 $ 处连续，与已知矛盾。所以 $ f(x) + g(x) $ 在 $ x_0 $ 处不连续。
+
+选项 (B) 错误。反例：如 $ f(x) = x $，$ x_0 = 0 $，则 $ f(x) $ 在 $ x = 0 $ 点连续，但 $ \frac{1}{f(x)} = \frac{1}{x} $ 在 $ x = 0 $ 点不连续，从而 (B) 不正确。
+
+选项 (C) 正确。因为 $ |f(x)| = \sqrt{f^2(x)} $，根据复合函数的连续性知，当 $ f(x) $ 在 $ x_0 $ 处连续时，则 $ |f(x)| $ 在 $ x_0 $ 处也连续。
+
+（或利用连续定义：因 $ f(x) $ 在 $ x_0 $ 点连续 $ \implies \lim\limits_{x \to x_0} f(x) = f(x_0) \implies \lim\limits_{x \to x_0} |f(x)| = |f(x_0)| \implies |f(x)| $ 在 $ x_0 $ 处也连续。）
+
+选项 (D) 正确。由于 $ g(x) = f(x) g(x) \cdot \frac{1}{f(x)} $，而由 $ f(x) $ 在 $ x_0 $ 点连续，且 $ f(x) \neq 0 $ 知，$ \frac{1}{f(x)} $ 在 $ x_0 $ 点也连续，又 $ f(x) g(x) $ 在 $ x_0 $ 点连续，由乘法的连续性知，$ g(x) $ 在 $ x_0 $ 点连续，从而 (D) 正确。
+
+（或 $ g(x) = \frac{f(x) g(x)}{f(x)} $，又 $ f(x) g(x), f(x) $ 在 $ x_0 $ 处都连续，且 $ f(x) \neq 0 $，由商的连续性知，$ g(x) $ 在 $ x_0 $ 点连续。）
+
+故应选 (B)。
+
+---
+
+**例 8**  
+（2002，数三）设 $ a \neq \frac{1}{2} $，则
+
+$$
+\lim_{n \to \infty} \ln \left[ \frac{n - 2na + 1}{n(1 - 2a)} \right]^n = \_\_\_\_\_\_.
+$$
+
+**解**  
+因 $ \ln u $ 在 $ u > 0 $ 时连续，利用复合函数的连续性得
+
+$$
+\text{原式} = \ln \left[ \lim_{n \to \infty} \left( \frac{n - 2na + 1}{n(1 - 2a)} \right)^n \right] = \ln \left[ \lim_{n \to \infty} \left( 1 + \frac{1}{n(1 - 2a)} \right)^n \right]
+$$
+
+$$
+= \ln \left\{ \lim_{n \to \infty} \left[ \left( 1 + \frac{1}{n(1 - 2a)} \right)^{n(1 - 2a)} \right]^{\frac{1}{1 - 2a}} \right\} = \ln e^{\frac{1}{1 - 2a}} = \frac{1}{1 - 2a}.
+$$
+
+---
+
+**例 9**  
+$$
+\lim_{x \to 0} \frac{\ln \sqrt{x^2 + 9}}{\sin(1 + x^2)} = \_\_\_\_\_\_.
+$$
+
+**解**  
+$$
+f(x) = \frac{\ln \sqrt{x^2 + 9}}{\sin(1 + x^2)}
+$$
+
+是初等函数，$ x = 0 $ 在其定义域内，由初等函数的连续性知，$ f(x) $ 在 $ x = 0 $ 点连续，则
+
+$\lim_{x \to 0} \frac{\ln \sqrt{x^2 + 9}}{\sin(1 + x^2)} = \frac{\ln \sqrt{0^2 + 9}}{\sin(1 + 0^2)} = \frac{\ln 3}{\sin 1}.$
+
+---
+
+**例 10**  
+下列函数在其定义域内连续的是
+
+(A) $\ln(x+1) + \frac{\cos x}{x}$.
+
+(B) $\begin{cases} \sin x, & x < 0, \\ \cos x, & x \geqslant 0. \end{cases}$
+
+(C) $\begin{cases} x+1, & x < 0, \\ 0, & x = 0, \\ x-1, & x > 0. \end{cases}$
+
+(D) $\begin{cases} \frac{\mathrm{e}^x - 1}{x}, & x \neq 0, \\ 0, & x = 0. \end{cases}$
+
+**【解】** 应选 (A). 因 $\ln(x+1) + \frac{\cos x}{x}$ 是初等函数，在其定义域内连续. 而 (B)(C)(D) 三个函数均为分段函数，在定义域中的 $x = 0$ 点不连续.
+
+---
+
+**例 11**  
+试讨论函数 $f(x) = \begin{cases} x^2 \sin \frac{1}{x}, & x < 0, \\ 1, & x = 0, \\ \mathrm{e}^{-\frac{1}{x}} + 1, & x > 0 \end{cases}$ 在定义域内的连续性.
+
+**【解】** $f(x)$ 是分段函数，其定义域为 $(-\infty, +\infty)$.
+
+当 $x < 0, x > 0$ 时，$f(x)$ 的表达式都是初等函数，因而 $f(x)$ 在 $x > 0, x < 0$ 时连续. 而 $x = 0$ 是 $f(x)$ 的分界点，
+
+$\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} x^2 \sin \frac{1}{x} = 0, \quad \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} (\mathrm{e}^{-\frac{1}{x}} + 1) = 1, \quad f(0) = 1,$
+
+则 $f(x)$ 在 $x = 0$ 点不连续. 所以 $f(x)$ 在 $(-\infty, 0)$ 和 $(0, +\infty)$ 内连续，在 $x = 0$ 点不连续.
+
+---
+
+**例 12**  
+（1994，数三）若 $f(x) = \begin{cases} \frac{\sin 2x + \mathrm{e}^{2ax} - 1}{x}, & x \neq 0, \\ a, & x = 0 \end{cases}$ 在 $(-\infty, +\infty)$ 内连续，则 $a = $ $\_\_\_\_\_\_$.
+
+**【解】** 因 $f(x)$ 在 $(-\infty, +\infty)$ 内连续，则 $f(x)$ 必在 $x = 0$ 处连续，即 $\lim_{x \to 0} f(x) = f(0) = a$.
+
+而 $\lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{\sin 2x + \mathrm{e}^{2ax} - 1}{x} = \lim_{x \to 0} \frac{\sin 2x}{x} + \lim_{x \to 0} \frac{\mathrm{e}^{2ax} - 1}{x}$
+
+$= \lim_{x \to 0} \frac{2x}{x} + \lim_{x \to 0} \frac{2ax}{x} = 2 + 2a,$
+
+则 $2 + 2a = a$，所以 $a = -2$.
+
+---
+
+**例 13**  
+（2017，数一、二、三）设函数 $f(x) = \begin{cases} \frac{1-\cos \sqrt{x}}{ax}, & x > 0, \\ b, & x \leqslant 0 \end{cases}$ 在 $x = 0$ 处连续，则
+
+(A) $ab = \frac{1}{2}$. $\quad$ (B) $ab = -\frac{1}{2}$. $\quad$ (C) $ab = 0$. $\quad$ (D) $ab = 2$.
+
+**【解】** $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} b = b,$
+
+$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \frac{1-\cos \sqrt{x}}{ax} = \lim_{x \to 0^+} \frac{\frac{2}{2}}{ax} = \frac{1}{2a}.$
+
+由于 $f(x)$ 在 $x=0$ 点连续，则 $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x) = f(0)$，  
+即 $b = \frac{1}{2a}$，则 $ab = \frac{1}{2}$，  
+故应选 (A).
+
+---
+
+**例 14**  
+（2008，数三）设函数 $f(x) = \begin{cases} x^2 + 1, & |x| \leqslant c, \\ \frac{2}{|x|}, & |x| > c \end{cases}$ 在 $(-\infty, +\infty)$ 内连续，则 $c = \quad$.
+
+【解】由题意可知 $c \geqslant 0$，$f(x) = \begin{cases} -\frac{2}{x}, & x < -c, \\ x^2 + 1, & -c \leqslant x \leqslant c, \\ \frac{2}{x}, & x > c, \end{cases}$  
+可知 $x = -c, x = c$ 为分段点.  
+要使 $f(x)$ 在 $(-\infty, +\infty)$ 内连续，只需 $f(x)$ 在 $x = \pm c$ 点连续即可.  
+即 $\lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = f(c)$，$\lim_{x \to -c^-} f(x) = \lim_{x \to -c^+} f(x) = f(-c)$，  
+$\lim_{x \to c^-} f(x) = \lim_{x \to c^-} (x^2 + 1) = c^2 + 1$，$\lim_{x \to c^+} f(x) = \lim_{x \to c^+} \frac{2}{x} = \frac{2}{c}$，$f(c) = c^2 + 1$，  
+则 $c^2 + 1 = \frac{2}{c}$，解得 $c = 1$.
+
+---
+
+**例 15**  
+（2018，数二）设函数 $f(x) = \begin{cases} -1, & x < 0, \\ 1, & x \geqslant 0, \end{cases}$ $g(x) = \begin{cases} 2 - ax, & x \leqslant -1, \\ x, & -1 < x < 0, \\ x - b, & x \geqslant 0, \end{cases}$ 若 $f(x) + g(x)$ 在 $(-\infty, +\infty)$ 内连续，则  
+(A) $a = 3, b = 1$.  
+(B) $a = 3, b = 2$.  
+(C) $a = -3, b = 1$.  
+(D) $a = -3, b = 2$.
+
+【解】令 $F(x) = f(x) + g(x) = \begin{cases} 1 - ax, & x \leqslant -1, \\ x - 1, & -1 < x < 0, \\ x - b + 1, & x \geqslant 0, \end{cases}$  
+$F(x)$ 在 $(-\infty, +\infty)$ 内连续，则 $F(x)$ 在 $x = -1, x = 0$ 点都连续.  
+$\lim_{x \to -1^-} F(x) = \lim_{x \to -1^-} (1 - ax) = 1 + a$，$\lim_{x \to -1^+} F(x) = \lim_{x \to -1^+} (x - 1) = -2$，$F(-1) = 1 + a$，  
+由 $\lim_{x \to -1^-} F(x) = \lim_{x \to -1^+} F(x) = F(-1)$，即 $1 + a = -2$，得 $a = -3$.  
+$\lim_{x \to 0^-} F(x) = \lim_{x \to 0^-} (x - 1) = -1$，$\lim_{x \to 0^+} F(x) = \lim_{x \to 0^+} (x - b + 1) = 1 - b$，$F(0) = 1 - b$，  
+由 $\lim_{x \to 0^-} F(x) = \lim_{x \to 0^+} F(x) = F(0)$，即 $1 - b = -1$，得 $b = 2$.  
+故应选 (D).
+
+---
+
+**例 16**  
+（1997，数二）已知 $f(x) = \begin{cases} (\cos x)^{\frac{1}{x^2}}, & x \neq 0, \\ a, & x = 0 \end{cases}$ 在 $x = 0$ 处连续，则 $a = \quad$.  
+
+$\lim_{x \to 0} f(x) = f(0) = a$,
+
+且 $\lim_{x \to 0} f(x) = \lim_{x \to 0} (\cos x)^{1/x^2} = \lim_{x \to 0} e^{\frac{1}{2} \ln \cos x} = e^{\lim_{x \to 0} \frac{\ln \cos x}{x^2}}$。
+
+而 $\lim_{x \to 0} \frac{\ln \cos x}{x^2} = \lim_{x \to 0} \frac{1}{\frac{\cos x}{2x}} = \lim_{x \to 0} \frac{1}{\cos x} \cdot \lim_{x \to 0} \frac{-\sin x}{2x} = -\frac{1}{2}$，
+
+所以，$a = \lim_{x \to 0} f(x) = e^{-\frac{1}{2}}$。故应填 $e^{-\frac{1}{2}}$。
+
+---
+
+**例 17** （2000，数二）设函数 $f(x) = \frac{x}{a + e^{bx}}$ 在 $(-\infty, +\infty)$ 内连续，且 $\lim_{x \to -\infty} f(x) = 0$，则常数 $a, b$ 满足
+
+（A）$a < 0, b < 0$. （B）$a > 0, b > 0$.  
+（C）$a \leq 0, b > 0$. （D）$a \geq 0, b < 0$.
+
+【解】由 $\lim_{x \to -\infty} f(x) = \lim_{x \to -\infty} \frac{x}{a + e^{bx}} = 0$，且 $\lim_{x \to -\infty} x = -\infty$，知 $\lim_{x \to -\infty} (a + e^{bx}) = \infty$，  
+则 $\lim_{x \to -\infty} e^{bx} = \infty$，知 $\lim_{x \to -\infty} bx = +\infty$，得 $b < 0$。
+
+又 $f(x) = \frac{x}{a + e^{bx}}$ 是初等函数，若 $a < 0$，当分母 $a + e^{bx} = 0$，即 $x = \frac{\ln(-a)}{b}$ 时，$f(x)$ 无定义，则 $x = \frac{\ln(-a)}{b}$ 是 $f(x)$ 的间断点，这与 $f(x)$ 在 $(-\infty, +\infty)$ 内连续矛盾，所以 $a \geq 0$。而当 $a \geq 0$ 时，分母 $a + e^{bx} > 0$，$f(x)$ 的定义域为 $(-\infty, +\infty)$，则 $f(x)$ 在 $(-\infty, +\infty)$ 内连续，故应选（D）。
+
+---
