@@ -1,0 +1,138 @@
+### 1. 微分的概念
+
+**定义（微分）** 设函数 $y = f(x)$ 在点 $x_0$ 的某一邻域内有定义，如果函数的增量 $\Delta y = f(x_0 + \Delta x) - f(x_0)$ 可以表示为
+
+$$
+\Delta y = A\Delta x + o(\Delta x) (\Delta x \to 0),
+$$
+
+其中 $A$ 为不依赖于 $\Delta x$ 的常数，$o(\Delta x)$ 是 $\Delta x$ 的高阶无穷小，则称函数 $y = f(x)$ 在点 $x_0$ 处可.
+
+
+**定理** 函数 $ y = f(x) $ 在点 $ x_0 $ 处可微的充分必要条件是 $ f(x) $ 在点 $ x_0 $ 处可导，且有
+
+$$
+\mathrm{d}y = f'(x_0) \Delta x = f'(x_0) \mathrm{d}x,
+$$
+
+在点 $ x $ 处，常记 $\mathrm{d}y = f'(x) \mathrm{d}x$。
+
+**【注】**
+
+（1）函数 $ y = f(x) $ 的微分 $ \mathrm{d}y = f'(x) \mathrm{d}x $，等于函数的导数 $ f'(x) $ 乘以自变量的微分 $ \mathrm{d}x $。
+
+（2）若函数 $ y = f(x) $ 在 $ x_0 $ 点可微，则函数的增量 $ \Delta y $ 与函数的微分 $ \mathrm{d}y $ 之间满足 $ \Delta y = \mathrm{d}y + o(\Delta x) $。
+
+---
+
+**例 30**
+
+设函数 $ y = f(x) $ 在 $ x = x_0 $ 处可微，$ \Delta y = f(x_0 + \Delta x) - f(x_0) $，则当 $ \Delta x \to 0 $ 时，必有
+
+(A) $ \mathrm{d}y $ 是比 $ \Delta x $ 高阶的无穷小量。
+
+(B) $ \mathrm{d}y $ 是比 $ \Delta x $ 低阶的无穷小量。
+
+(C) $ \Delta y - \mathrm{d}y $ 是比 $ \Delta x $ 高阶的无穷小量。
+
+(D) $ \Delta y - \mathrm{d}y $ 是与 $ \Delta x $ 同阶的无穷小量。
+
+**【解】**
+
+因 $ y = f(x) $ 在 $ x = x_0 $ 点可微，由微分定义知 $ \Delta y = \mathrm{d}y + o(\Delta x) $，即 $ \Delta y - \mathrm{d}y = o(\Delta x) $，则 $ \Delta y - \mathrm{d}y $ 是比 $ \Delta x $ 高阶的无穷小量，知选项 (C) 正确。
+
+而 $ \mathrm{d}y = f'(x_0) \Delta x $，则 $ \frac{\mathrm{d}y}{\Delta x} = f'(x_0) $，由于 $ f'(x_0) $ 是否为零不清楚，则 (A) 不一定正确，(B) 不正确，(D) 也不正确，故应选 (C)。
+
+---
+
+**例 31**
+
+若 $ \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = 3 $，则 $ y = f(x) $ 在 $ x = a $ 点的微分 $ \mathrm{d}y = $ ______。
+
+**【解】**
+
+由导数定义知，$ f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = 3 $，则 $ y = f(x) $ 在 $ x = a $ 点可导，所以 $ y = f(x) $ 在 $ x = a $ 点可微，微分 $ \mathrm{d}y = f'(a) \mathrm{d}x = 3 \mathrm{d}x $。
+
+---
+
+**例 32**
+
+（2002，数二）设函数 $ f(u) $ 可导，$ y = f(x^2) $ 当自变量 $ x $ 在 $ x = -1 $ 处取得增量 $ \Delta x = -0.1 $ 时，相应的函数增量 $ \Delta y $ 的线性主部为 0.1，则 $ f'(1) = $
+
+(A) -1。
+
+(B) 0.1。
+
+(C) 1。
+
+(D) 0.5。
+
+**【解】**
+
+由微分定义知，$ \Delta y $ 的线性主部即为函数在 $ x = -1 $ 处的微分 $ \mathrm{d}y $。
+
+则
+
+$$
+\mathrm{d}y \bigg|_{x = -1} = 0.1.
+$$
+
+又
+
+$$
+\mathrm{d}y \bigg|_{x = -1} = y' \bigg|_{x = -1} \cdot \Delta x = \left[f'(x^2) \cdot 2x \right] \bigg|_{x = -1} \cdot \Delta x
+$$
+
+$$
+= -2f'(1) \cdot (-0.1) = 0.2f'(1).
+$$
+
+于是有 $ 0.2f'(1) = 0.1 $，所以 $ f'(1) = 0.5 $。
+
+故应选 (D)。
+
+---
+
+**例 33**
+
+（1988，数一、二、三）若函数 $ y = f(x) $ 有 $ f'(x_0) = \frac{1}{2} $，则当 $ \Delta x \to 0 $ 时，该函数在 $ x = x_0 $ 处的微分 $ \mathrm{d}y $ 是
+
+(A) 与 $ \Delta x $ 等价的无穷小。
+
+(B) 与 $ \Delta x $ 同阶的无穷小。
+
+(C) 比 $\Delta x$ 低阶的无穷小.  
+
+(D) 比 $\Delta x$ 高阶的无穷小.
+
+**【解】** 由微分定义及计算公式得 $y = f(x)$ 在 $x = x_0$ 处的微分 $dy = f'(x_0) \Delta x = \frac{1}{2} \Delta x$，  
+则  
+$$
+\lim_{\Delta x \to 0} \frac{dy}{\Delta x} = \lim_{\Delta x \to 0} \frac{\frac{1}{2} \Delta x}{\Delta x} = \frac{1}{2},
+$$  
+所以 $dy$ 与 $\Delta x$ 是同阶无穷小.  
+故应选(B).
+
+---
+
+### 2. 微分的几何意义
+
+微分 $dy = f'(x_0) dx$ 在几何上表示曲线 $y = f(x)$ 的切线上的点的纵坐标的增量.  
+$\Delta y = f(x_0 + \Delta x) - f(x_0)$ 在几何上表示曲线 $y = f(x)$ 上的点的纵坐标的增量.  
+当自变量的增量 $|\Delta x|$ 充分小时, $\Delta y \approx dy$.
+
+---
+
+**例 34**
+
+设 $y = f(x)$ 具有二阶导数，且 $f'(x) < 0$, $f''(x) < 0$. $\Delta x$ 为自变量在 $x_0$ 处的增量，$\Delta y$ 与 $dy$ 分别为 $y = f(x)$ 在点 $x_0$ 处对应的增量与微分，若 $\Delta x > 0$，则  
+(A) $0 < dy < \Delta y$.  
+(B) $0 < \Delta y < dy$.  
+(C) $\Delta y < dy < 0$.  
+(D) $dy < \Delta y < 0$.
+
+**【解】** 因 $f'(x) < 0$, $f''(x) < 0$，则曲线 $y = f(x)$ 单调递减，是凸的.  
+因此，当 $\Delta x > 0$ 时，$\Delta y = f(x_0 + \Delta x) - f(x_0) < 0$, $dy = f'(x_0) \Delta x < 0$，故排除(A)(B)选项.  
+因曲线是凸的，则曲线在下，切线在上，由微分的几何意义，有 $\Delta y < dy$，所以 $0 > dy > \Delta y$. 故应选(C).
+
+> 【评注】 利用泰勒公式 $f(x_0 + \Delta x) = f(x_0) + f'(x_0) \Delta x + \frac{f''(\xi)}{2}(\Delta x)^2$，即 $\Delta y = dy + \frac{f''(\xi)}{2}(\Delta x)^2 < dy < 0$.
