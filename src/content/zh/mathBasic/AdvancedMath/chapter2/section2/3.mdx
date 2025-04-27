@@ -1,0 +1,259 @@
+## 三、微分的计算
+
+若函数 $ y = f(x) $ 可微，则其微分计算公式为
+$$
+\mathrm{d}y = f'(x) \mathrm{d}x。
+$$
+
+即函数的微分等于函数的导数乘以自变量的微分。
+
+### 微分的四则运算法则
+
+设 $ u(x)、v(x) $ 可微，则：
+
+$$
+\mathrm{d}[u(x) \pm v(x)] = \mathrm{d}u(x) \pm \mathrm{d}v(x)；
+$$
+
+$$
+\mathrm{d}[u(x)v(x)] = v(x)\mathrm{d}u(x) + u(x)\mathrm{d}v(x)；
+$$
+
+$$
+\mathrm{d}\left[\frac{u(x)}{v(x)}\right] = \frac{v(x)\mathrm{d}u(x) - u(x)\mathrm{d}v(x)}{v^2(x)} \quad (v(x) \neq 0)。
+$$
+
+---
+
+### 一阶微分形式的不变性
+
+设 $ y = f(u) $ 对 $ u $ 可导，$ u = \varphi(x) $ 可导，  
+则复合函数 $ y = f[\varphi(x)] $ 的微分为
+
+$$
+\mathrm{d}y = f'[\varphi(x)] \mathrm{d}\varphi(x) = f'[\varphi(x)] \varphi'(x) \mathrm{d}x。
+$$
+
+即复合函数的微分等于外层函数的导数乘以内层函数的微分。
+
+也就是说对于函数 $ y = f(u) $，无论 $ u $ 是自变量还是中间变量，$ y = f(u) $ 的微分形式式总可以写为
+$$
+\mathrm{d}y = f'(u) \mathrm{d}u。
+$$
+
+**【注】**  
+对应于初等函数的求导公式也有求微分公式，如  
+$$
+\mathrm{d}a^x = a^x \ln a \, \mathrm{d}x
+$$
+等。
+
+---
+
+**例 46**
+
+求函数 $ y = x^2 e^x + x - 3 $ 的微分。
+
+**【解】**
+
+**方法一**  
+$$
+y' = (x^2 e^x)' + x' - 3' = 2x e^x + x^2 e^x + 1，
+$$
+则
+$$
+\mathrm{d}y = y' \mathrm{d}x = (2x e^x + x^2 e^x + 1) \mathrm{d}x。
+$$
+
+**方法二**  
+$$
+\mathrm{d}y = \mathrm{d}(x^2 e^x) + \mathrm{d}x - \mathrm{d}3 = e^x \mathrm{d}x^2 + x^2 \mathrm{d}e^x + \mathrm{d}x
+$$
+展开：
+$$
+= e^x \cdot 2x \mathrm{d}x + x^2 e^x \mathrm{d}x + \mathrm{d}x
+$$
+整理：
+$$
+= (2x e^x + x^2 e^x + 1) \mathrm{d}x。
+$$
+
+---
+
+**例 47**
+
+求 $ y = \dfrac{\cos x}{1+\sin x} $ 的微分。
+
+**【解】**
+
+**方法一**  
+$$
+y' = \frac{-\sin x (1+\sin x) - \cos x \cdot \cos x}{(1+\sin x)^2} = -\frac{1}{1+\sin x}，
+$$
+则
+$$
+\mathrm{d}y = -\frac{1}{1+\sin x} \mathrm{d}x。
+$$
+
+**方法二**  
+$$
+\mathrm{d}y = \frac{(1+\sin x) \mathrm{d}\cos x - \cos x \cdot \mathrm{d}(1+\sin x)}{(1+\sin x)^2}
+$$
+展开后：
+$$
+= \frac{(1+\sin x)(-\sin x) \mathrm{d}x - \cos x \cdot \cos x \mathrm{d}x}{(1+\sin x)^2}
+$$
+整理得：
+$$
+= -\frac{1}{1+\sin x} \mathrm{d}x。
+$$
+
+---
+
+**例 48**
+
+设  
+$$
+y = \arcsin \sqrt{1 - x^2}，
+$$
+求  
+$$
+\mathrm{d}y \Big|_{x = \frac{1}{2}}。
+$$
+
+**【解】**
+
+*方法一*
+$$
+y' = \frac{1}{\sqrt{1-(\sqrt{1-x^2})^2}} \cdot (\sqrt{1-x^2})'
+= \frac{1}{\sqrt{x^2}} \cdot \frac{-2x}{2\sqrt{1-x^2}}
+= -\frac{1}{\sqrt{1-x^2}} \quad (x>0),
+$$
+因此
+$$
+\mathrm{d}y = -\frac{1}{\sqrt{1-x^2}} \mathrm{d}x，
+$$
+于是有
+$$
+\mathrm{d}y\Big|_{x=\frac{1}{2}} = -\frac{2\sqrt{3}}{3} \mathrm{d}x。
+$$
+
+*方法二*
+$$
+\mathrm{d}y = \frac{1}{\sqrt{1-(\sqrt{1-x^2})^2}} \mathrm{d}(\sqrt{1-x^2})
+= \frac{1}{\sqrt{x^2}} \cdot \frac{1}{2\sqrt{1-x^2}} \mathrm{d}(1-x^2)
+$$
+$$
+= \frac{1}{\sqrt{x^2}} \cdot \frac{1}{2\sqrt{1-x^2}} \cdot (-2x) \mathrm{d}x
+= -\frac{1}{\sqrt{1-x^2}} \mathrm{d}x \quad (x>0),
+$$
+所以
+$$
+\mathrm{d}y\Big|_{x=\frac{1}{2}} = -\frac{2\sqrt{3}}{3} \mathrm{d}x。
+$$
+
+---
+
+**例 49**
+
+（2000，数二）设函数 $ y = y(x) $，由方程 $ 2^{xy} = x+y $ 所确定，  
+则  
+$$
+\mathrm{d}y \Big|_{x=0} = \quad ?
+$$
+
+**【解】**
+
+**方法一**  
+对方程 $ 2^{xy} = x+y $ 两边关于 $ x $ 求导数，得：
+$$
+2^{xy} \ln 2 \cdot (y + x y') = 1 + y'，
+$$
+将 $ x=0 $ 代入原方程得 $ y=1 $，再将 $ x=0, y=1 $ 代入上式得：
+$$
+y'(0) = \ln 2 - 1，
+$$
+故
+$$
+\mathrm{d}y \Big|_{x=0} = (\ln 2 - 1) \mathrm{d}x。
+$$
+
+
+**方法二**  
+对方程 $ 2^{xy} = x+y $ 两边求微分，得：
+$$
+2^{xy} \ln 2 \cdot (y \mathrm{d}x + x \mathrm{d}y) = \mathrm{d}x + \mathrm{d}y，
+$$
+解得：
+$$
+\mathrm{d}y = \frac{1 - y 2^{xy} \ln 2}{x \cdot 2^{xy} \ln 2 - 1} \mathrm{d}x。
+$$
+将 $ x=0 $ 代入原方程得 $ y=1 $，  
+再将 $ x=0, y=1 $ 代入上式得：
+$$
+\mathrm{d}y \Big|_{x=0} = (\ln 2 - 1) \mathrm{d}x。
+$$
+
+---
+
+**例 50**
+
+（2005，数二）设 $ y = (1+\sin x)^x $，则  
+$$
+\mathrm{d}y \Big|_{x=\pi} = \quad ?
+$$
+
+**【解】**
+
+$ y = (1+\sin x)^x = e^{x\ln(1+\sin x)} $，  
+则
+$$
+y' = e^{x\ln(1+\sin x)} \cdot \left[ \ln(1+\sin x) + x \cdot \frac{\cos x}{1+\sin x} \right]，
+$$
+所以
+$$
+y'(\pi) = -\pi，
+$$
+因此
+$$
+\mathrm{d}y \Big|_{x=\pi} = -\pi \mathrm{d}x。
+$$
+
+> 本题也可用对数求导法来求导数。
+
+---
+
+**例 51**
+
+（1996，数四）设方程 $ x = y^y $ 确定 $ y $ 是 $ x $ 的函数，  
+则  
+$$
+\mathrm{d}y = \quad ?
+$$
+
+**【解】**
+
+对方程 $ x = y^y $ 两边取对数，得：
+$$
+\ln x = y \ln y。
+$$
+对方程 $ \ln x = y \ln y $ 两边关于 $ x $ 求导，得：
+$$
+\frac{1}{x} = y' \ln y + y \cdot \frac{1}{y} y'，
+$$
+化简得：
+$$
+\frac{1}{x} = y'( \ln y + 1 )，
+$$
+解得：
+$$
+y' = \frac{1}{x(1+\ln y)}。
+$$
+
+所以：
+$$
+\mathrm{d}y = y' \mathrm{d}x = \frac{1}{x(1+\ln y)} \mathrm{d}x。
+$$
+
+
+> 也可对方程两边求微分，直接求出 $\mathrm{d}y$。
